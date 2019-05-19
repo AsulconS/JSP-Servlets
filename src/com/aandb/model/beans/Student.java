@@ -1,11 +1,22 @@
-package com.aandb.servlet;
+package com.aandb.model.beans;
 
-public class Employee
+public class Student
 {
+    private int cui;
     private String name;
     private String lastName;
     private String e_mail;
 
+    public int getCui()
+    {
+        return cui;
+    }
+    
+    public void setCui(int cui)
+    {
+        this.cui = cui;
+    }
+    
     public String getName()
     {
         return name;

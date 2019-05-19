@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Login Page</title>
+	<link rel="stylesheet" href="/JSP/jsp/styles.css">
+	<script type="text/javascript" src="/JSP/jsp/validate.js"></script>
+</head>
+<body>
+	<h1>DBP Form</h1>
+    <form id="mainForm-ID" action="/JSP/login" onsubmit="return validateSubmit()" method="GET">
+        Nombres:<br>
+        <input id="field0" name="name" type="text" onblur="validate(this)"><br>
+            <div id="invalid_field0"></div><br>
+        Apellidos:<br>
+        <input id="field1" name="lastName" type="text" onblur="validate(this)"><br>
+            <div id="invalid_field1"></div><br>
+        E-Mail:<br>
+        <input id="field2" name="e_mail" type="text" onblur="validate(this)"><br>
+            <div id="invalid_field2"></div><br>
+        Poblacion:<br>
+        <select name="city">
+            <option value="ali">Arequipa</option>
+            <option value="mad">Lima</option>
+            <option value="sev">Cusco</option>
+            <option value="val">Puno</option>
+        </select><br><br>
+        Descripcion:<br>
+        <textarea rows="4" cols="50"></textarea><br><br>
+        Sexo:<br>
+        <input type="radio" name="gender" value="male" checked> Hombre<br>
+        <input type="radio" name="gender" value="female"> Mujer<br>
+        <input type="radio" name="gender" value="other"> Otro<br><br>
+        <input type="checkbox" checked> Deseo recibir información sobre novedades y ofertas<br><br>
+        <input id="contract-ID" name="contract" type="checkbox">
+        Acepto haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos<br><br>
+        <input id="submit-ID" name="submit" type="submit" value="Enviar">
+        <input type="reset" value="Restablecer" onclick="resetFields()">
+    </form>
+</body>
+</html>

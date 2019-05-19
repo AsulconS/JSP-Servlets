@@ -1,14 +1,19 @@
-package com.aandb.servlet;
+package com.aandb.controller;
 
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 
+import javax.servlet.annotation.WebServlet;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.aandb.model.beans.Student;
+
+@WebServlet("/servlet")
 public class Servlet extends HttpServlet
 {
     private static final long serialVersionUID = 1L;
@@ -19,7 +24,7 @@ public class Servlet extends HttpServlet
     }
     
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-    {   
+    {
         handleRequest(request, response);
 	}
     
@@ -30,12 +35,12 @@ public class Servlet extends HttpServlet
 	
 	private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-	    Employee employee = new Employee();
-	    employee.setName("Adrian Rolando");
-	    employee.setLastName("Bedregal Vento");
-	    employee.setE_mail("rolandobedregal321@gmail.com");
+	    Student student = new Student();
+	    student.setName("Adriann Rolando");
+	    student.setLastName("Bedregal Vento");
+	    student.setE_mail("rolandobedregal321@gmail.com");
 	    
-	    request.getSession().setAttribute("emp", employee);
+	    request.getSession().setAttribute("student", student);
 	    
 	    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/jsp/index.jsp");
         dispatcher.forward(request, response);
