@@ -6,7 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
     <title>Splash</title>
-    <link rel="stylesheet" href="/JSP/jsp/styles.css">
+    <link rel="stylesheet" href="/AandB/form/styles.css">
 </head>
 <body>
     <h1>Student Registered!</h1>
