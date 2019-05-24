@@ -28,21 +28,21 @@ public class Servlet extends HttpServlet
         handleRequest(request, response);
 	}
     
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-	{
-	    doGet(request, response);
-	}
-	
-	private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-	{
-	    Student student = new Student();
-	    student.setName("Adriann Rolando");
-	    student.setLastName("Bedregal Vento");
-	    student.setE_mail("rolandobedregal321@gmail.com");
-	    
-	    request.getSession().setAttribute("student", student);
-	    
-	    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/jsp/index.jsp");
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
+        doGet(request, response);
+    }
+    
+    private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
+        Student student = new Student();
+        student.setName("Adriann Rolando");
+        student.setLastName("Bedregal Vento");
+        student.setE_mail("rolandobedregal321@gmail.com");
+        
+        request.getSession().setAttribute("student", student);
+        
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/jsp/index.jsp");
         dispatcher.forward(request, response);
-	}
+    }
 }

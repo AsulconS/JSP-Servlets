@@ -22,6 +22,7 @@ public class StudentDAO
         dbConnection = new DBConnection(jdbcURL, jdbcUsername, jdbcPassword);
     }
     
+    
     public boolean insert(Student student) throws SQLException
     {
         String sql = "INSERT INTO students VALUES (?, ?, ?, ?)";
